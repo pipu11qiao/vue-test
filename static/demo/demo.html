@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RingPic</title>
+  <style>
+    .box {
+      position: relative;
+      width: 600px;
+      height: 600px;
+      margin: 0 auto;
+      margin-top: 20px;
+      border: 1px solid #ddd;
+    }
+  </style>
+  <!--<link rel="stylesheet" href="demo.css">-->
+</head>
+<body>
+<div class="box box1">
+
+</div>
+<script src="../src/ringPic.js"></script>
+<script>
+
+  var getImgArr = function (path) {
+    var arr = [];
+    var arrBig = [];
+    // 23 - 0 47 - 24 71 - 48
+    for (var c = 0; c < 3; c++) {
+      for (var r = 0; r < 24; r++) {
+        arr.push(path + 'c' + ((c * 24) + (23 - r)) + '_l2_0_0.jpg')
+        arrBig.push(path + 'c' + ((c * 24) + (23 - r)) + '_l1_0_0.jpg')
+      }
+    }
+    return {
+      s: arr,
+      b: arrBig
+    };
+  };
+  var picArr = getImgArr(location.href.replace(/[^/]*$/, '') + '/img/');
+  var ringPic1 = new RingPic({
+    el: document.querySelectorAll('.box1')[0],
+    picArr: picArr.s,
+    picArrBig: picArr.b,
+    maxSize: 1,
+    intervalX: 30,
+    intervalY: 40
+  });
+</script>
+</body>
+</html>

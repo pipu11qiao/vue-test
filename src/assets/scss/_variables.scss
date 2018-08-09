@@ -1,0 +1,106 @@
+@charset "UTF-8";
+$content-width: 1200px;
+
+// 字体颜色
+$gray-dark: #333333;
+$gray: #666666;
+$gray-light: #999999;
+$gray-lighter: #ccc;
+// $gray-active: #64b1f8;
+$gray-active: #68b2f5;
+
+// 边框颜色
+$border-color: #ededed;
+// 颜色
+$brand-primary: #35dce3 !default; // #337ab7
+$brand-success:         #5cb85c !default;
+$brand-info:            #5bc0de !default;
+$brand-warning:         #f0ad4e !default;
+$brand-danger:          #d9534f !default;
+
+@mixin span-emphasis-variant($parent, $color) {
+  #{$parent} {
+    display: inline-block;
+    background-color: $color;
+    padding: 3px 6px;
+    color: #fff;
+  }
+}
+// mixin
+@mixin btn {
+  font-size: 14px;
+  padding: 3px 6px;
+  color: #fff;
+  background: #282828;
+  cursor: pointer;
+  transition: all .3s;
+  &:hover,&:active,&.active {
+    background: #000;
+  }
+}
+@mixin btn-disable {
+  font-size: 14px;
+  padding: 3px 6px;
+  color: #fff;
+  background: #d0d0d0;
+  cursor: not-allowed;
+}
+
+@mixin modal-btn{
+  font-size: 14px;
+  padding: 5px 20px;
+  color: $gray-dark;
+  border: 1px solid #a0a0a0;
+  background: #fff;
+  cursor: pointer;
+  transition: all .3s;
+  &:hover,&:active,&.active {
+    color: #fff;
+    background: #282828;
+    border-color: #282828;
+  }
+}
+@mixin underline-link{
+  display: inline-block;
+  padding-bottom: 1px;
+  border-bottom: 1px solid transparent;
+  &:hover{
+    color: #111;
+    border-bottom-color: #555;
+  }
+}
+
+@mixin imgSet{
+  //width:100%;
+  height:100%;
+  position: relative;
+  overflow: hidden;
+  img{
+    border:none;
+    //width:100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: all,.5s;
+  }
+  //&:hover{
+  //  img{
+  //    transform:translate(-50%,-50%) scale(1.1,1.1);
+  //    transition: all,.5s;
+  //  }
+  //}
+}
+@mixin liSet{
+  width:390px;
+  height:250px;
+  border:1px solid #f0f0f0;
+  margin-right:10px;
+  margin-top:10px;
+  overflow: hidden;
+  &:nth-child(3n){margin-right:0;};
+  &:last-child {margin-right:0;}
+  &:hover{
+  }
+}

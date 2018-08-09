@@ -1,0 +1,45 @@
+@charset "UTF-8";
+body, ul, ol, dl, li, p, h1, h2, h3, h4, h5, h6, form, table, td, img, div, dt, dd, input, button {
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
+html{
+  height: 100%
+}
+//html,body{
+//  min-height: 100%;
+//}
+body {
+  font-size: 12px;
+  font-family: "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, "sans-serif";
+}
+img {
+  border: none;
+}
+ul {
+  list-style: none;
+}
+a, input, button, select, textarea,
+a:focus, input:focus, button:focus, select:focus, textarea:focus
+{
+  outline: none;
+}
+button {
+  border: none;
+  text-transform: none;
+}
+/*设置默认样式为none*/
+.appearance-none, .appearance-none:focus {
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari 和 Chrome */
+}
+.clearfix:before,.clearfix:after{
+  content: '';
+  display: table;
+}
+.clearfix:after{
+  clear: both;
+}
