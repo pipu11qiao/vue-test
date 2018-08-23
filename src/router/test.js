@@ -2,6 +2,7 @@
 import index from '@/view/test'
 import hello from '@/view/test/hello'
 import ringPic from '@/view/test/ringPic'
+import mock from '@/view/test/mock'
 
 export default [
   {
@@ -21,5 +22,9 @@ export default [
   {
     path: '/test/ringPic',
     component: ringPic,
+  },
+  {
+    path: '/test/mock',
+    component: mock,
   }
 ]

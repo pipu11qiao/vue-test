@@ -14,7 +14,7 @@
 
   export default {
     data() {
-      let pageStr = 'hello ringPic';
+      let pageStr = 'hello ringPic mock';
       let pageArr = [];
       pageStr.split(' ').forEach(function (item) {
         pageArr.push({

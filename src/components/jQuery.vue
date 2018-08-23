@@ -18,7 +18,7 @@
   require('malihu-custom-scrollbar-plugin');
   require('custom_option');
 
-  require('@/../node_modules/option_prepare/dist/custom_option.min.css');
+  require('@/../node_modules/custom_option/dist/custom_option.css');
   require('@/../node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css');
 
 //  console.log($.C_modal);

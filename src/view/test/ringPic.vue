@@ -6,8 +6,8 @@
 </template>
 
 <script>
-
   import RingPic from 'pipu-ringpic'
+
   let getImgArr = (path) => {
     let arr = [];
     let arrBig = [];
@@ -47,6 +47,7 @@
 <style lang="scss" scoped>
 
   .pic-box{
+    position: relative;
     width: 600px;
     height: 600px;
     margin: 0 auto;
